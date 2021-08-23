@@ -1,0 +1,155 @@
+{
+  "content": {
+    "conversation_start": {
+      "content": {
+        "text": "Welcome to my shop XYZ!!!",
+        "button": [
+          {
+            "text": "Show List Item",
+            "type": "event",
+            "event": "goto",
+            "data": "show_list_item"
+          },
+          {
+            "text": "End Shopping",
+            "type": "event",
+            "event": "goto",
+            "data": "conversation_end"
+          }
+        ],
+        "id": "conversation_start"
+      }
+    },
+    "show_list_item": {
+      "content": {
+        "text": "Here List item!!!",
+        "button": [
+          {
+            "text": "Item 1",
+            "type": "event",
+            "event": "goto",
+            "data": "detail_item_1"
+          },
+          {
+            "text": "Item 2",
+            "type": "event",
+            "event": "goto",
+            "data": "detail_item_2"
+          },
+          {
+            "text": "Item 3",
+            "type": "event",
+            "event": "goto",
+            "data": "detail_item_3"
+          },
+          {
+            "text": "End Shopping",
+            "type": "event",
+            "event": "goto",
+            "data": "conversation_end"
+          }
+        ],
+        "id": "show_list_item"
+      }
+    },
+    "detail_item_1": {
+      "content": {
+        "text": "Item1 (400$)",
+        "button": [
+          {
+            "text": "Buy",
+            "type": "event",
+            "event": "capture",
+            "data": {
+              "key": "item_id",
+              "value": "item 1",
+              "next": "process_to_checkout"
+            }
+          },
+          {
+            "text": "Back to List",
+            "type": "event",
+            "event": "goto",
+            "data": "show_list_item"
+          }
+        ],
+        "id": "detail_item_1"
+      }
+    },
+    "detail_item_2": {
+      "content": {
+        "text": "Item2 (500$)",
+        "button": [
+          {
+            "text": "Buy",
+            "type": "event",
+            "event": "capture",
+            "data": {
+              "key": "item_id",
+              "value": "item 2",
+              "next": "process_to_checkout"
+            }
+          },
+          {
+            "text": "Back to List",
+            "type": "event",
+            "event": "goto",
+            "data": "show_list_item"
+          }
+        ],
+        "id": "detail_item_2"
+      }
+    },
+    "detail_item_3": {
+      "content": {
+        "text": "Item3 (600$)",
+        "button": [
+          {
+            "text": "Buy",
+            "type": "event",
+            "event": "capture",
+            "data": {
+              "key": "item_id",
+              "value": "item 3",
+              "next": "process_to_checkout"
+            }
+          },
+          {
+            "text": "Back to List",
+            "type": "event",
+            "event": "goto",
+            "data": "show_list_item"
+          }
+        ],
+        "id": "detail_item_3"
+      }
+    },
+    "process_to_checkout": {
+      "content": {
+        "text": "order successful",
+        "button": [
+          {
+            "text": "Continue Shopping",
+            "type": "event",
+            "event": "goto",
+            "data": "show_list_item"
+          },
+          {
+            "text": "End Shopping",
+            "type": "event",
+            "event": "goto",
+            "data": "conversation_end"
+          }
+        ],
+        "id": "process_to_checkout"
+      }
+    },
+    "conversation_end": {
+      "content": {
+        "text": "See you later",
+        "button": [],
+        "id": "conversation_end"
+      }
+    }
+  }
+}
